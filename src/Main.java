@@ -41,5 +41,14 @@ public class Main {
     }
     public static void task3() {
         System.out.println("Задача 3");
+        int populationSize = 12_000_000;
+        int birth = 17; // инициализация рождаемости на 1 000 человек
+        int rateMortality = 8; // инициализация смерности на 1 000 человек
+        int period = 0; //инициализация начального периода
+        while ( period < 10) {
+            period = period + 1;
+            populationSize = populationSize + populationSize * birth /1_000 - populationSize * rateMortality /1_000;
+            System.out.println( "Год " + period + ", численность населения составляет " + populationSize);
+        }
     }
 }
