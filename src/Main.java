@@ -6,7 +6,7 @@ public class Main {
         task4();
         task5();
         task6();
-        //task7();
+        task7();
         //task8();
         //task9();
         //task10();
@@ -80,24 +80,47 @@ public class Main {
         while (total <= accumulation) {
             month = month + 1;
             total = total + contribution + total * interestRate;
-            if (month %6 == 0) {
+            if (month % 6 == 0) {
                 System.out.println("Месяц " + month + " сумма накоплений составляет " + total + " рублей.");
             }
         }
     }
+
     public static void task6() {
-        System.out.println("Задача 5");
+        System.out.println("Задача 6");
         double contribution = 15000; // инициализация суммы ежемесячного вклада
         double total = 0; // инициализация первоначальной суммы накопления
         int month = 0; // инициализация месяца начала накопления
         int periodYear = 9; // инициализация периода накопления в годах
         int periodMonth = periodYear * 12;  // инициализация количества месяцев накопления
         double interestRate = 0.07; // инициализация процентной ставки в месяц
-        while ( month <= periodMonth) {
+        while (month <= periodMonth) {
             month = month + 1;
             total = total + contribution + total * interestRate;
-            if ( month %6 == 0) {
-                System.out.println( "Месяц " + month + " сумма накоплений составляет " + total + " рублей." );
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " сумма накоплений составляет " + total + " рублей.");
+            }
+        }
+    }
+
+    public static void task7() {
+        System.out.println("Задача 7");
+        System.out.println(" Вариант 1 с использованием for");
+        int dateFriday = 1;
+        int daysMonth = 31;
+        {
+            for (; dateFriday <= daysMonth; ) {
+                System.out.println("Сегодня пятница, " + dateFriday + "-е число. Необходимо подготовить отчет.");
+                dateFriday = dateFriday + 7;
+            }
+        }
+        {
+            System.out.println("Вариант 2 с использованием while");
+            int dateFridayTwo = 1;
+            int daysMonthTwo = 31;
+            while (dateFridayTwo <= daysMonthTwo) {
+                System.out.println("Сегодня пятница, " + dateFridayTwo + "-е число. Необходимо подготовить отчет.");
+                dateFridayTwo = dateFridayTwo + 7;
             }
         }
     }
