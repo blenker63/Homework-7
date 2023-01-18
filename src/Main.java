@@ -7,9 +7,7 @@ public class Main {
         task5();
         task6();
         task7();
-        //task8();
-        //task9();
-        //task10();
+        task8();
     }
 
     public static void task1() {
@@ -106,8 +104,8 @@ public class Main {
     public static void task7() {
         System.out.println("Задача 7");
         System.out.println(" Вариант 1 с использованием for");
-        int dateFriday = 1;
-        int daysMonth = 31;
+        int dateFriday = 1; // инициализация даты первой пятницы в месяце
+        int daysMonth = 31; // инициализация количества дней в месяце
         {
             for (; dateFriday <= daysMonth; ) {
                 System.out.println("Сегодня пятница, " + dateFriday + "-е число. Необходимо подготовить отчет.");
@@ -116,12 +114,28 @@ public class Main {
         }
         {
             System.out.println("Вариант 2 с использованием while");
-            int dateFridayTwo = 1;
-            int daysMonthTwo = 31;
+            int dateFridayTwo = 1; // инициализация даты первой пятницы в месяце
+            int daysMonthTwo = 31; // инициализация количества дней в месяце
             while (dateFridayTwo <= daysMonthTwo) {
                 System.out.println("Сегодня пятница, " + dateFridayTwo + "-е число. Необходимо подготовить отчет.");
                 dateFridayTwo = dateFridayTwo + 7;
             }
+        }
+    }
+
+    public static void task8() {
+        System.out.println("Задача 8");
+        int year = 0; // инициализация начального года пролета кометы
+        int period = 79; // инициализация периодичности пролета кометы
+        int yearCurrent = 2023; // инициализация текущего года
+        int periodBeginning = 200; // инициализация периода до текущего года
+        int periodEnd = 100; // инициализация периода после текущего года
+        int yearBeginning = yearCurrent - periodBeginning; // инициализация года начала периода наблюдения
+        int yearEnd = yearCurrent + periodEnd; // инициализация года окончания периода наблюдения
+        for (; year <= yearEnd; ) {
+            year = year + period;
+            if (year >= yearBeginning && year <= yearEnd)
+                System.out.println(year);
         }
     }
 }
