@@ -107,9 +107,8 @@ public class Main {
         int dateFriday = 1; // инициализация даты первой пятницы в месяце
         int daysMonth = 31; // инициализация количества дней в месяце
         {
-            for (; dateFriday <= daysMonth; ) {
+            for (; dateFriday <= daysMonth; dateFriday = dateFriday + 7) {
                 System.out.println("Сегодня пятница, " + dateFriday + "-е число. Необходимо подготовить отчет.");
-                dateFriday = dateFriday + 7;
             }
         }
         {
